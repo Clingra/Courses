@@ -16,4 +16,4 @@ while i<100:
     i=i+item
 print("--- %s seconds for optimized program---" % (time.time() - start_time2))
 
-#optimized program runs about 1(10^-6) seconds faster
+#optimized program runs about 1(10^-6) seconds faster (approximately 30% faster on my machine)
