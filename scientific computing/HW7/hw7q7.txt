@@ -1,0 +1,9 @@
+One obvious way to transpose a matrix is to use,
+	for i=0:n-1
+		for j=0:n-1
+			destination(j+i*n) = source(i+j*n)
+		end
+	end
+How can you take advantage of locality and cache blocking to improve the performance of this operation?
+
+Use cache blocking to perform the operations on multiple source locations.

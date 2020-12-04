@@ -1,0 +1,24 @@
+1) A hard drive has the following properties: Rotational rate = 10,000 RPM, Average seek time = 4ms., Avg # sectors/track = 800, 1024 Bytes/sector. Find the total access time to read 32KB of data (1KB = 1024 Bytes) from one surface of a hard drive.
+
+Work:
+Average rotational delay: 10,000R PM = 166.67 rev/sec or 6 ms/rev. Avg rot delay = 3 ms/rev
+Sector read time: disk is at 6 ms/rev, 800 sectors per track, 6/800 ms = 0.0075 ms.
+Disk Access Time = Seek Time (4 ms) + Average Rotational Delay (3 ms) + Sector Read Time (0.0075ms) = 
+
+ANS: 7.0075ms
+
+
+2) Compare 70% cache hit rate with 31% cache miss rate, if the latency for a miss is 10x and 100x worse for a hit.
+
+Work:
+Hit rate effective access time = 0.7*100 + 0.3*10 = 73
+Miss rate effective access time = 0.31*10 + 0.69*100 = 72.1
+
+ANS: The cache miss rate is significantly more impactful than a hit on the overall time
+
+
+3) Fortran programming language uses column major ordering to store arrays. If I have a large 2D array in Fortran with individual dimensions of array exceeding the cache memory size, what would be the cache miss rate when traversing along a column and when traversing along a row?
+
+Work:
+Logical --> the miss rate would be 100% because the array could not be stored in the cache, so it must always be fetched from memory assuming no index of the array is repeated before traversing all rows and columns. Obviously, this is very bad for running time.
+ANS: 100%
