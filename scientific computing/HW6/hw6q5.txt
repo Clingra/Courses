@@ -1,0 +1,35 @@
+when attempting to create the plot for problem 5 I received the following error, visible on 
+line 25-28 (indented out)
+
+lee@clingra:~/Desktop/courses/scientific computing/HW6$ git clone https://github.com/fabiensanglard/CpuCacheMountainViewer.git
+Cloning into 'CpuCacheMountainViewer'...
+remote: Enumerating objects: 19, done.
+remote: Total 19 (delta 0), reused 0 (delta 0), pack-reused 19
+Unpacking objects: 100% (19/19), 118.77 KiB | 623.00 KiB/s, done.
+lee@clingra:~/Desktop/courses/scientific computing/HW6$ gcc -Wall -o mountain.c fcyc2.c clock.c
+gcc: error: fcyc2.c: No such file or directory
+gcc: error: clock.c: No such file or directory
+gcc: fatal error: no input files
+compilation terminated.
+lee@clingra:~/Desktop/courses/scientific computing/HW6$ ls
+CpuCacheMountainViewer  hw6q4.m  q1through3.txt
+lee@clingra:~/Desktop/courses/scientific computing/HW6$ cd CpuCacheMountainViewer
+lee@clingra:~/Desktop/courses/scientific computing/HW6/CpuCacheMountainViewer$ ls
+clock.c  how_to_disable_core_on_mac_osx_lion.txt  mountain.c
+clock.h  L1_L2_cache_vis_MacBookAir.xlsx          README.md
+fcyc2.c  L1_L2_cache_vis_MacPro.xlsx
+fcyc2.h  Makefile
+lee@clingra:~/Desktop/courses/scientific computing/HW6/CpuCacheMountainViewer$ cd CpuCacheMountainViewer
+bash: cd: CpuCacheMountainViewer: No such file or directory
+
+lee@clingra:~/Desktop/courses/scientific computing/HW6/CpuCacheMountainViewer$ gcc -Wall -o mountain.c fcyc2.c clock.c
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+(.text+0x24): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+
+lee@clingra:~/Desktop/courses/scientific computing/HW6/CpuCacheMountainViewer$ ./mountain
+bash: ./mountain: No such file or directory
+lee@clingra:~/Desktop/courses/scientific computing/HW6/CpuCacheMountainViewer$ ls
+clock.c  fcyc2.c  how_to_disable_core_on_mac_osx_lion.txt  L1_L2_cache_vis_MacPro.xlsx  README.md
+clock.h  fcyc2.h  L1_L2_cache_vis_MacBookAir.xlsx          Makefile
+
